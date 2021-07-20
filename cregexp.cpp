@@ -2,8 +2,6 @@
 
 #include <cassert>
 
-#define CREGEXP_ASSERT(expression, message) assert(expression && "CRegExp: " message);
-
 namespace
 {
 bool matchImpl(const char *pattern, const char *subject);
