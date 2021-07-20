@@ -20,7 +20,7 @@ TEST_CASE("Basic tests", "[testBasic]")
     REQUIRE(false == cregexp::match("Some", "FooBar"));
 }
 
-TEST_CASE("Zero or more token test", "[testZeroOrMore]")
+TEST_CASE("* token tests", "[testZeroOrMore]")
 {
     REQUIRE(true  == cregexp::match("*Some", "Some"));
     REQUIRE(true  == cregexp::match("*Some", "FooSome"));
@@ -54,7 +54,7 @@ TEST_CASE("Zero or more token test", "[testZeroOrMore]")
     REQUIRE(false == cregexp::match("*****Some***", "FooBar"));
 }
 
-TEST_CASE("Test CRegExp", "[testExactlyOne]")
+TEST_CASE("? token tests ", "[testExactlyOne]")
 {
     REQUIRE(false == cregexp::match("?Some", "Some"));
     REQUIRE(false == cregexp::match("?Some", "FooSome"));
@@ -83,7 +83,7 @@ TEST_CASE("Test CRegExp", "[testExactlyOne]")
     REQUIRE(true  == cregexp::match("?Some?", "FSomeB"));
 }
 
-TEST_CASE("Combined tests", "[testCombined]")
+TEST_CASE("Combined * and ? tests", "[testCombined]")
 {
     REQUIRE(false == cregexp::match("So*?me", "Some"));
     REQUIRE(true  == cregexp::match("So*?me", "SoBarKme"));
