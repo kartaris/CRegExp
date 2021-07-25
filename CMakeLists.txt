@@ -3,9 +3,7 @@ project(CRegExpTests)
 
 set(CMAKE_CXX_STANDARD 11)
 
-include_directories(include)
-
-set(lib_sources cregexp.cpp)
+set(lib_sources include/cregexp.h cregexp.cpp)
 
 add_library(CRegExp STATIC ${lib_sources})
 

@@ -1,6 +1,4 @@
-#include "cregexp.h"
-
-#include <cassert>
+#include "include/cregexp.h"
 
 namespace
 {
