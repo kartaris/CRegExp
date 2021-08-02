@@ -1,3 +1,10 @@
+/**
+ * CRegExp library implements simple regex
+ * Supported tokens:
+ *      '*' - matches any character zero or more times
+ *      '?' - matches any character exactly one time
+ */
+
 #ifndef CREGEXPLIB_CREGEXP_H
 #define CREGEXPLIB_CREGEXP_H
 

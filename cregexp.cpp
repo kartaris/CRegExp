@@ -17,6 +17,12 @@ bool matchStar(const char *pattern, const char *subject)
     }
 }
 
+/**
+ * Implementation for regex match algorithm
+ * @param pattern
+ * @param subject
+ * @return
+ */
 bool matchImpl(const char *pattern, const char *subject)
 {
     // End of pattern
@@ -56,9 +62,6 @@ bool cregexp::match(const char *pattern, const char *subject)
     // Checking if no pattern given for quit without making any other checks
     if(!pattern || pattern[0] == '\0')
         return true;
-
-    // TODO: Simplify regex ****Some** -> *Some*
-    // TODO: Escape sequences support \?, \*
 
     if(pattern[0] != '*' && pattern[0] != '?' && pattern[0] != subject[0])
         return false;
